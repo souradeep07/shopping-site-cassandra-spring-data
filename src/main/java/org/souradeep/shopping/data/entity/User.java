@@ -21,7 +21,7 @@ public class User {
 	private UUID id;
 	@Column(value = "first_name")
 	private String firstName;
-	@Column(value = "first_name")
+	@Column(value = "last_name")
 	private String lastName;
 	@Column(value = "email")
 	private String email;
