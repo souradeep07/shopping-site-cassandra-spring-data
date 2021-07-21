@@ -28,7 +28,10 @@ public class ShoppingController {
 
 	@PostMapping(value = "/", produces = "application/json")
 	public User home1() {
-		return userRepo.findById(UUID.fromString("1354650a-0654-4326-b586-9e39872e48aa")).get();
+		User user = userRepo.findById(UUID.fromString("1354650a-0654-4326-b586-9e39872e48aa")).get();
+		user.setCart(user.getCart());
+		userRepo.save(user);
+		return user;
 	}
 
 }
